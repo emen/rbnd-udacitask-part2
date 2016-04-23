@@ -1,3 +1,4 @@
+require 'colorize'
 module Listable
 
   def format_description(description)
@@ -20,9 +21,9 @@ module Listable
   end
 
   def format_priority(priority = nil)
-    value = " ⇧" if priority == "high"
-    value = " ⇨" if priority == "medium"
-    value = " ⇩" if priority == "low"
+    value = " ⇧".red if priority == "high"
+    value = " ⇨".blue if priority == "medium"
+    value = " ⇩".light_blue if priority == "low"
     value = "" if !priority
     return value
   end
