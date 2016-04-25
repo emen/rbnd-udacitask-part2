@@ -27,7 +27,7 @@ class UdaciList
     puts @title
     puts "-" * @title.length
     @items.each_with_index do |item, position|
-      puts "#{position + 1}) #{item.details}"
+      puts "#{position + 1}) [#{item_type(item)[0]}] #{item.details}"
     end
   end
   def filter(type)
@@ -35,7 +35,12 @@ class UdaciList
     puts @title
     puts "-" * @title.length
     @items.each_with_index do |item, position|
-      puts "#{position + 1}) #{item.details}" if item.class.name.downcase == type + 'item'
+      puts "#{position + 1}) [#{item_type(item)[0]}] #{item.details}" if item_type(item) == type
     end
+  end
+
+  private
+  def item_type(item)
+    item.class.name.downcase.sub(/item/, '')
   end
 end
