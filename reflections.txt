@@ -1,13 +1,20 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+- Use highline to add a menu based command line tool
+- Use Marshal to persist objects
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+- Add a command line tool `list.rb`
+- Save/load list from file
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+- 3 hours
 2. What was the most rewarding challenge you conquered?
+- Think of new features
 3. What two additional features did you build? Why?
+- A tool is needed for managing list items
+- List items need to be saved
 4. Where do you still have room to grow?
+- Allow users to add more detailed info for list items.
